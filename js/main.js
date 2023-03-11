@@ -13,25 +13,57 @@ Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengo
 
 */
 
+const targetDom = document.getElementById('target')
 
 const bici = [
     {
         nome: 'Graziella',
-        peso: '30'
+        peso: 30
     },
     {
         nome: 'MontainBike',
-        peso: '33'
+        peso: 33
     },
     {
         nome: 'CarbonioBike',
-        peso: '15'
+        peso: 15
     },
 ]
 
+const squadre = [
+    {
+        nome: 'Inter',
+        punti: 0,
+        gol: 0,
+    },
+    {
+        nome: 'Juve',
+        punti: 0,
+        gol: 0,
+    },
+    {
+        nome: 'Milan',
+        punti: 0,
+        gol: 0,
+    },
+    {
+        nome: 'Napoli',
+        punti: 0,
+        gol: 0,
+    }
+]
+
+console.log(squadre)
 
 
-for(let i = 0; i < bici.length; i++){
-    console.log(bici[i])
-    
+
+squadre.forEach(elemento => {
+    elemento.punti = numeroCasuale()
+    console.log(squadre)
+})
+
+
+function numeroCasuale(){
+    const numeroCasuale = Math.floor((Math.random() * 100) + 1);
+    return numeroCasuale
 }
