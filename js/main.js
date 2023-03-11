@@ -58,7 +58,8 @@ console.log(squadre)
 
 
 squadre.forEach(elemento => {
-    elemento.punti = numeroCasuale()
+    elemento.punti = numeroCasuale();
+    elemento.gol = numeroCasuale();
     console.log(squadre)
 })
 
