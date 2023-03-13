@@ -23,6 +23,8 @@ const bici = [
     }
 ];
 
+console.log(bici)
+
 
 let indiceBiciLeggera = 0;
 
@@ -88,7 +90,14 @@ squadre.forEach(elemento => {
     
 })
 
-console.log(squadre)
+console.log(squadre);
+
+const classifica = squadre.map((squadra) => {
+    const {punti, gol} = squadra;
+    return { punti, gol};
+});
+
+console.log(classifica)
 
 
 
@@ -96,3 +105,29 @@ function numeroCasuale(){
     const numeroCasuale = Math.floor((Math.random() * 100) + 1);
     return numeroCasuale
 }
+
+
+/*
+Snack 3
+Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
+Usiamo i nuovi metodi degli array foreach o filter.
+*/
+
+
+const citta = ['Milano', 'Bologna', 'Torino', 'Roma', 'Napoli'];
+
+console.log(sottoInsieme(citta, 0, 2))
+
+
+function sottoInsieme(array, a, b){
+
+    return array.filter((element, index) => {
+        if(index >= a && index <= b){
+            return true
+        } return false
+
+    })
+
+}
+
